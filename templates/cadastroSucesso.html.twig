@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Sucesso {% endblock %}
+
+{% block body %} 
+
+    <div class="sucesso">
+      <p>{{ nome }} cadastrado com sucesso</p>  
+    </div>
+
+    <a href="{{ url('web_index') }}">Voltar</a>
+
+{% endblock %}

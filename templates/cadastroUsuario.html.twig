@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block body %} 
+    <form method="POST" action="/salvar"> 
+        <label class="field" for="nome">Nome:</label><br>
+        <input class="field" type="text" id="nome" name="nome" value=""><br>
+        <label class="field" for="senha">Senha:</label><br>
+        <input class="field" type="password" id="senha" name="senha" value=""><br><br>
+        <input class="btn" type="submit" value="Enviar">
+    </form>
+{% endblock %}

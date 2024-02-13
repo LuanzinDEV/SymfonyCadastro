@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.logo{
+    margin-bottom: 20px;
+    width: 100vw;
+    height: 200px;
+    background-color: rgb(35,35,35);
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.logo img{
+    object-fit: none;
+}
+
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.field{
+    margin-top: 8px;
+}
+
+.btn{
+    padding: 10px 50px 10px 50px;
+}
+
+.sucesso, .erro{
+    font-size: 25px;
+    color: green;
+}
+
+.erro{
+    color: red;
+}

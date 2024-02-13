@@ -1,0 +1,20 @@
+web_index:
+    path: /
+    controller: 'App\Controller\UsuarioController::index'
+    methods: ['GET']
+    
+
+web_salvar:
+    path: /salvar
+    controller: 'App\Controller\UsuarioController::salvar'
+    methods: ['POST']
+
+api_v1_lista:
+    path: /api/v1/lista
+    controller: 'App\Controller\Api\UsuarioController::lista'
+    methods: ['GET']
+
+api_v1_cadastra:
+    path: /api/v1/cadastra
+    controller: 'App\Controller\Api\UsuarioController::cadastra'
+    methods: ['POST']
