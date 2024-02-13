@@ -41,8 +41,6 @@ class UsuarioController extends AbstractController
             return $this->render('cadastroErro.html.twig',[
                 'nome' => $usuario->getNome()
             ]);
-        }
-
-        
+        }      
     }
 }

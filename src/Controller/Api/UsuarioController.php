@@ -2,16 +2,32 @@
 
 namespace App\Controller\Api;
 
+use App\Entity\Usuario;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 
-class UsuarioController
-{
-    public function lista() : JsonResponse
+class UsuarioController extends AbstractController
+{   
+    private $entityManager;
+
+    public function __construct(EntityManagerInterface $entityManager)
     {
-        return new JsonResponse(["implementar lista na API"], 404);
+        $this->entityManager = $entityManager;
     }
 
-    public function cadastra() : JsonResponse
+    public function lista() : JsonResponse
+    {
+        $doctrine = $this->entityManager->getRepository(Usuario::class);
+
+        $usuarios = $doctrine->findAll();
+
+        return new JsonResponse($doctrine->pegarTodos());
+    }
+
+    public function cadastra() : Response
     {
         return new JsonResponse(["implementar cadastro na API/não tive paciencia"], 404);
     }
